@@ -2,8 +2,8 @@
 title: SF Blog
 SEOTitle: SF的博客 | SF Blog
 header-img: img/post-bg-desk.jpg
-email: 暂无
-description: "写一句你想写的话"
+email: song_fei@sjtu.edu.cn
+description: "Learn, practice & share"
 keyword: "我的博客"
 url: "http://SBF-2.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
