@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      打开数据通向模型的大门--Embedding
-subtitle:   *Embedding是数据进入模型的入场券，数据是怎样处理的呢？*
+subtitle:   Embedding是数据进入模型的入场券，数据是怎样处理的呢？
 date:       2023-12-12
 author:     SF
 header-img: img/Embedding-post-bg.jpeg
