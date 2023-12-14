@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      打开数据通向模型的大门--Embedding
-subtitle:   *了解不等于理解，理解不等于掌握。当我觉得自己好像懂了transformer,pre-training,fine-tuning时，结果证明，我甚至不懂，如何开始获得模型的真实输入的！*
+subtitle:   *Embedding是数据进入模型的入场券，数据是怎样处理的呢？*
 date:       2023-12-12
 author:     SF
 header-img: img/Embedding-post-bg.jpeg
