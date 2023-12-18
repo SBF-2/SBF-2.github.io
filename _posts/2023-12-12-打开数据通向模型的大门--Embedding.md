@@ -103,10 +103,12 @@ subword-level介于两者之间，学习语言中常用到的一些词或者词�
     
     对于可能出现的未在词汇库中的子词，用'< unk >'表示；
 - **Word-Piece**
+  
     word-Piece主要由Bert家族模型采用，其分词思想为：
     - 在一句话的句首添加'[CLS]',在两句话之间添加'[sep]'，'[CLS]'主要用在需要进行句子语气分类等场景下，放在句子开头，便于识别句子的类别；
     - 寻找出现最频繁的子词组合：认为两个单字出现概率和小于两个单字组成的子词出现的概率，则认为该子词出现频繁；
 - **sentence-piece**
+  
     这种方式的优势在于对多语言的兼容性。不同于直接对语句进行分词，其将不同语言的子词先行转化成unicode编码在进行分词，另外对一些格式字符进行转换。这一部分具体请参考[HeptaAI博客](https://zhuanlan.zhihu.com/p/631463712)
 
 对tokenization源码感兴趣的朋友，可以学习[huggingface transformer](https://github.com/huggingface/transformers) *src/model/*中相应模型的tokenization方法。
