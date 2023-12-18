@@ -2,7 +2,7 @@
 title: SF's Blog
 SEOTitle: SF的博客 | SF Blog
 header-img: img/post-bg-myown.png
-email: 暂无
+email: song_fei@sjtu.edu.cn
 description: "SF"
 keyword: "我的博客"
 url: "http://SBF-2.github.io"          # your host, for absolute URL
@@ -94,7 +94,7 @@ service-worker: true
 
 
 # Friends
-Accounts Related: [
+Friends: [
     {
         title: "Bilibili",
         href: "https://space.bilibili.com/383554026?spm_id_from=333.1007.0.0"
