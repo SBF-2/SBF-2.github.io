@@ -59,6 +59,7 @@ tags:
 > （这里解释一下，其实tokenization在我的认识里面也是**分为广义和狭义**两种的，狭义的tokenization就只是分词得到token列表，例如在**BertTokenizer**类中对应的函数就是*BertTokenizer.tokenize()*；而广义的tokenization还包括将token列表转化成向量，对应的函数为*BertTokenizer.encode()*,其功能与*BertTokenizer.tokenize() + BertTokenizer._convert_token_to_id()*类似，但也有点不同，那就是一些特殊符号，比如一句话的开始标志或者终止标志等，默认情况下，仅tokenize()函数是不会加入用来标注token在词语或者语句中位置的标志）。
 > 
 > 下面是一个示例：
+
 ```python
 import torch
 from transformers import BertTokenizer
