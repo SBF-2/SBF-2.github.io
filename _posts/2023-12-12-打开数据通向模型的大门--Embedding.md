@@ -180,7 +180,7 @@ $$PP(W) = P(w_1w_2w_3...w_N)^{- \frac{1}{N}}$$
 #### 2.2 NNLM及RNNLM
 NNLM模型作为利用神经网络训练词向量用于语言处理的先驱之作，其利用一个简单的神经网络来进行词向量的训练，利用N-gram范式进行NLP。
 
-![NNLM流程图]([img/404-bg.jpg](https://github.com/SBF-2/SBF-2.github.io/blob/master/img/embedding/NNLM.jpg))
+![NNLM流程图](https://github.com/SBF-2/SBF-2.github.io/blob/master/img/embedding/NNLM.jpg)
 
 
 NNLM的整个流程可以概括为：
