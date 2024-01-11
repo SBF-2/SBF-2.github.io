@@ -180,7 +180,8 @@ $$PP(W) = P(w_1w_2w_3...w_N)^{- \frac{1}{N}}$$
 #### 2.2 NNLM及RNNLM
 NNLM模型作为利用神经网络训练词向量用于语言处理的先驱之作，其利用一个简单的神经网络来进行词向量的训练，利用N-gram范式进行NLP。
 
-![NNLM流程图](../img/embedding/NNLM.png)
+![NNLM流程图](./images/NNLM.jpg)
+
 
 NNLM的整个流程可以概括为：
 > 1建立词库--2单词ont-hot编码--3句子中前i-1个词投影矩阵变换并拼接--4全连接层W--5tanh激活函数--6隐藏层H--7softmax激活函数--8输出词库中每个单词的可能概率
