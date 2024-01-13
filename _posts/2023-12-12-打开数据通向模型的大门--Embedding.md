@@ -267,9 +267,7 @@ negative sampling即负采样，他的核心思想就是：减少softmax多分�
 
 这种方法的理论依据主要来自其对损失部分的改进。这种思想又类似于神经网络中的权重衰退。模型的主要任务就是，找出正确的词，但我们又不希望模型想的太多，导致目标词的查找分布范围过大，于是就利用一个惩罚项来约束住最终结果。于是我们可以看到其损失函数为：
 
-$$
-\log \sigma\left(v_{w_O}^{\prime}{ }^{\top} v_{w_I}\right)+\sum_{i=1}^k \mathbb{E}_{w_i \sim P_n(w)}\left[\log \sigma\left(-v_{w_i}^{\prime}{ }^{\top} v_{w_I}\right)\right]
-$$
+$$\log \sigma\left(v_{w_O}^{\prime}{ }^{\top} v_{w_I}\right)+\sum_{i=1}^k \mathbb{E}_{w_i \sim P_n(w)}\left[\log \sigma\left(-v_{w_i}^{\prime}{ }^{\top} v_{w_I}\right)\right]$$
 
 **subsampling of frequent words**
 首先我需要引入一个概念，那就是信息量。信息论中对于信息量的定义为：
@@ -279,9 +277,7 @@ $$
 
 这种方法针对的对象是训练数据集。对于skip-gram来说，训练数据中应该减少常用词的出现频次，而增加包含信息量更多的稀少词。其数学表达如下：
 
-$$
-P\left(w_i\right)=1-\sqrt{\frac{t}{f\left(w_i\right)}}
-$$
+$$P\left(w_i\right)=1-\sqrt{\frac{t}{f\left(w_i\right)}}$$
 
 $P\left(w_i\right)$表示每个词Wi可能被抛弃的概率，$f(w_i)$是wi在词库中的概率，t是一个阈值，一般为1e-5.
 
