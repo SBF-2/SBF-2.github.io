@@ -252,7 +252,9 @@ hierarchical softmax 即层次softmax技术，以下简称H-softmax，其核心�
 ![Huffman](./images/embedding/H-softmax1.png)
 
 而实际中，这个概率是怎么样计算的呢，以skip-gram为例，公式如下：
+
 $$P_{\text{i step}} = sigmoid(\theta_i^Tx)$$
+
 这里x是中心词在embedding中所查到的向量，$\theta_i$是第i步所对应的左节点的单词在周围词向量embedding表中所得到的向量，两个向量做内积之后得到的值经过激活函数就可以得到相应的概率了。
 
 但其实这个地方存在一个问题就是，哈夫曼树的构建！哈夫曼树的构建影响着整个算法速度以及准确度，目前很少有谈到使用这项技术的。我也没有很多的深入，如果有兴趣请自行寻找更多的资料。
@@ -264,6 +266,7 @@ negative sampling即负采样，他的核心思想就是：减少softmax多分�
 这种方法使得softmax的计算复杂度从O(N)降到了O(k)，而N代表的是语料库中的单词个数，而k相对就小了很少。
 
 这种方法的理论依据主要来自其对损失部分的改进。这种思想又类似于神经网络中的权重衰退。模型的主要任务就是，找出正确的词，但我们又不希望模型想的太多，导致目标词的查找分布范围过大，于是就利用一个惩罚项来约束住最终结果。于是我们可以看到其损失函数为：
+
 $$
 \log \sigma\left(v_{w_O}^{\prime}{ }^{\top} v_{w_I}\right)+\sum_{i=1}^k \mathbb{E}_{w_i \sim P_n(w)}\left[\log \sigma\left(-v_{w_i}^{\prime}{ }^{\top} v_{w_I}\right)\right]
 $$
